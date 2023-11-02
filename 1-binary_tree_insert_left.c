@@ -9,9 +9,13 @@
 binary_tree_t *binary_tree_insert_left(binary_tree_t *parent, int value)
 {
     binary_tree_t *n_node = binary_tree_node(parent, value);
-    if (parent && n_node == NULL)
+    if (parent == NULL)
     {
-        return NULL;
+        return (NULL);
+    }
+    if (n_node == NULL)
+    {
+        return (NULL);
     }
     /*assigning the value to the nodes */
     if (parent->left != NULL)
